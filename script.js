@@ -59,8 +59,8 @@ const outputArray = [];
 // Går elementer hendelser / give elements events
 
 addFront.addEventListener("click", function () {
-  console.log("Button clicked!");
-  
+  console.log("addFront clicked!");
+
   outputArray.unshift(inputField.value);
   
   console.log(outputArray);
@@ -68,7 +68,35 @@ addFront.addEventListener("click", function () {
   outputField.textContent = outputArray;
 });
 
+removeFront.addEventListener("click", function () {
+  console.log("removeFront clicked!");
+  
+  outputArray.shift(inputField.value);
+  
+  console.log(outputArray);
 
+  outputField.textContent = outputArray;
+});
+
+addBack.addEventListener("click", function () {
+  console.log("addBack clicked!");
+  
+  outputArray.push(inputField.value);
+  
+  console.log(outputArray);
+
+  outputField.textContent = outputArray;
+});
+
+removeBack.addEventListener("click", function () {
+  console.log("removeBack clicked!");
+  
+  outputArray.pop(inputField.value);
+  
+  console.log(outputArray);
+
+  outputField.textContent = outputArray;
+});
 
 
 
